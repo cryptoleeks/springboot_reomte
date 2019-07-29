@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .file-box{ position:relative;width:340px}
+        .txt{ height:22px; border:1px solid #cdcdcd; width:200px;border-right:none;}
+        .btn{ background-color:#FFF; border:1px solid #CDCDCD;height:26px; width:70px;}
+        .file{ position:absolute; top:0; right:80px; height:24px; filter:alpha(opacity:0);opacity: 0;width:260px }
+
+
+        .sq_list li.f_input #em{margin-left: 195px;line-height: 32px;color: #666;font-size: 13px;}
+        #uploadImg{cursor:pointer; overflow:hidden; position:relative;width: 104px;height: 32px;}
+        #file{ cursor:pointer;position:absolute; z-index:100; left:0;top:0;width: 104px;height: 32px;opacity:0;filter:alpha(opacity=0);}
+        #uploadImg a{cursor:pointer;background:#0e2d43;position: absolute;top:0;left:0;display: block;width: 104px;height: 32px;text-align: center;line-height: 32px;color:white;font-size:14px;font-weight:normal;}
+    </style>
+    <script src="js/jquery-1.8.3.min.js">
+
+    </script>
+    <script>
+        $('#file').change(function(){
+            $('#em').text($('#file').val());
+        });
+    </script>
+</head>
+<body>
+<div class="file-box">
+    <form method="post" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="file"><br>
+        <input type="submit" value="提交">
+    </form>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/iprecord?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  servlet:
+    multipart:
+      max-request-size: 10MB
+      max-file-size: 10MB
+  resources:
+    static-locations: classpath:/static/
+  mvc:
+    static-path-pattern : /**
+  redis:
+    jedis:
+      pool:
+        min-idle: 5
+        max-active: 10
+        max-idle: 10
+        max-wait: 2000
+    port: 6379
+    host: 127.0.0.1
+    timeout: 1000
+mybatis:
+  #config-location:  classpath:mybatis-config.xml
+  type-aliases-package: cn.loveyx815.userscript.entity
+  mapper-locations: classpath:mapper/*.xml

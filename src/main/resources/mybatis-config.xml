@@ -1,0 +1,5 @@
+var btn=$('.J_BuySubForm button');if(btn.innerText=="开团提醒") btn.click();
+        var min=$(".min").innerText;var sec=$(".sec").innerText;
+
+        setInterval(function(){         var min=$(".min").innerText;var sec=$(".sec").innerText;if(min=='0'&&sec=='0.0') {var btn=$('.J_BuySubForm button'); btn.click();}; }, 100);
+        var min=$(".min").innerText;var sec=$(".sec").innerText;if(min=='0'&&sec=='0.0') {var btn=$('.J_BuySubForm button'); btn.click();}
