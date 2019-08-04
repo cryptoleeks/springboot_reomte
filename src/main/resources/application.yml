@@ -22,7 +22,17 @@ spring:
     port: 6379
     host: 127.0.0.1
     timeout: 1000
+    #SpringCache-redis
+    cache:
+      cache-names: redisCache
+      type: redis
+      redis:
+        key-prefix :
+        use-key-prefix: false
+        time-to-live: 600000
 mybatis:
   #config-location:  classpath:mybatis-config.xml
   type-aliases-package: cn.loveyx815.userscript.entity
   mapper-locations: classpath:mapper/*.xml
+
+
