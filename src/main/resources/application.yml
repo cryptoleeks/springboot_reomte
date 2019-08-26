@@ -30,9 +30,25 @@ spring:
         key-prefix :
         use-key-prefix: false
         time-to-live: 600000
+  activemq:
+    #activemq连接地址
+    broker-url: tcp://localhost:61616
+    #user户名
+    user: admin
+    #密码
+    password: admin
+    #连接池属性
+    pool:
+      enabled: true
+      max-connections: 50
+  jms:
+    #是否开启发布订阅模式
+    pub-sub-domain: true
+    #默认目的地址
+    template:
+      default-destination: activemq.default.destination
 mybatis:
   #config-location:  classpath:mybatis-config.xml
   type-aliases-package: cn.loveyx815.userscript.entity
   mapper-locations: classpath:mapper/*.xml
-
 
